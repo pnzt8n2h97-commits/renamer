@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renamer – batch rename files on Mac</title>
+<meta name="description" content="A simple Mac app for renaming many files at once. Live preview, find & replace, numbering, undo.">
+<style>
+  :root {
+    --bg: #fafafc; --fg: #17171c; --muted: #62626e; --card: #ffffff; --line: #e4e4ec;
+    --accent: #5b5ff0; --accent-2: #8a47f2; --accent-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e0e13; --fg: #f1f1f6; --muted: #9a9aa8; --card: #17171f; --line: #2a2a36; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 72px 16px 48px; }
+  .icon {
+    width: 84px; height: 84px; border-radius: 20px;
+    background: linear-gradient(145deg, var(--accent), var(--accent-2));
+    display: grid; place-items: center; margin-bottom: 28px;
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  .icon span { display: block; width: 52px; height: 17px; background: #fff; border-radius: 5px; position: relative; }
+  .icon span::after { content: ""; position: absolute; right: 12px; top: -4px; width: 3px; height: 25px; background: var(--accent); border-radius: 2px; }
+  h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.02em; }
+  .lead { font-size: 20px; color: var(--muted); margin: 0 0 32px; max-width: 34em; }
+  .btn {
+    display: inline-block; padding: 14px 26px; border-radius: 12px; font-weight: 600; text-decoration: none;
+    background: linear-gradient(145deg, var(--accent), var(--accent-2)); color: var(--accent-fg);
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .meta { color: var(--muted); font-size: 14px; margin-top: 12px; }
+  ul.features { list-style: none; padding: 0; margin: 56px 0 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  ul.features li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  ul.features strong { display: block; margin-bottom: 4px; }
+  ul.features span { color: var(--muted); font-size: 15px; }
+  .note { margin-top: 48px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--card); font-size: 15px; color: var(--muted); }
+  .note b { color: var(--fg); }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <div class="icon" aria-hidden="true"><span></span></div>
+  <h1>Rename files in bulk. Without the headache.</h1>
+  <p class="lead">Drop in a pile of files, set a few rules, check the live preview, and rename them all at once. Mistake? One click undoes it.</p>
+
+  <a class="btn" href="https://github.com/pnzt8n2h97-commits/renamer/releases/latest/download/Renamer.dmg">Download for Mac</a>
+  <p class="meta">Free · macOS 13 or later · Apple silicon &amp; Intel</p>
+
+  <ul class="features">
+    <li><strong>Live preview</strong><span>See every new name before anything changes.</span></li>
+    <li><strong>Find &amp; replace</strong><span>Plain text or regular expressions.</span></li>
+    <li><strong>Numbering</strong><span>Sequences with custom start, step and padding.</span></li>
+    <li><strong>Prefix, suffix, case</strong><span>Add text and change case in one pass.</span></li>
+    <li><strong>Safe by design</strong><span>Name clashes are flagged, swaps just work, and undo is built in.</span></li>
+    <li><strong>Drag &amp; drop</strong><span>Files and folders, straight from Finder.</span></li>
+  </ul>
+
+  <div class="note">
+    <b>First launch:</b> Renamer isn't notarized by Apple yet, so macOS may say it can't verify the app. Right-click (or Control-click) Renamer in Applications, choose <b>Open</b>, then <b>Open</b> again. You only need to do this once.
+  </div>
+
+  <footer>Open source · <a href="https://github.com/pnzt8n2h97-commits/renamer">View on GitHub</a></footer>
+</main>
+</body>
+</html>

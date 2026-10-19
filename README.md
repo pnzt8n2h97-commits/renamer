@@ -10,7 +10,7 @@ A simple batch file renaming app for macOS, built with SwiftUI.
 
 ## Download
 
-Grab the latest `Renamer.dmg` from [Releases](../../releases/latest).
+Grab the latest `Renamer.dmg` from [Releases](../../releases/latest), or visit https://renamer-theta.vercel.app.
 
 The app is ad-hoc signed, not notarized. On first launch, right-click the app → **Open**.
 
@@ -22,3 +22,7 @@ Requires Xcode 15+ / Swift 5.9+ on macOS 13+.
 swift run                      # run from source
 ./scripts/build-dmg.sh 1.0.0   # universal .app + dist/Renamer-1.0.0.dmg
 ```
+
+## Site
+
+`site/` is a static landing page, deployed on Vercel (team `acm-corp`, project `renamer`).
